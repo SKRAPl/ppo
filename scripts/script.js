@@ -6529,6 +6529,11 @@ if (accordions !== null) {
 }
 const menuList = document.querySelectorAll('.header__navigation-list');
 
+document.addEventListener("contextmenu", e => e.preventDefault());
+  document.addEventListener("keydown", e => {
+    if ((e.ctrlKey && e.key === 's') || e.key === 'F12') e.preventDefault();
+  });
+
 if (menuList !== null) {
     menuList.forEach(item => {
         item.addEventListener('mouseenter', function() {
