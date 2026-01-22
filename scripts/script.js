@@ -6616,7 +6616,7 @@ if (searchInput) {
                 category.style.display = '';
             });
         } else {
-            // Первый проход: показываем/скрываем элементы по поиску
+            // Первый проход: показываем/скрываем элементы по поиску (только непустые)
             allDataItems.forEach(item => {
                 // Ищем текст в data__item-text или data__item-text1
                 let itemText = item.querySelector('.data__item-text');
@@ -6625,85 +6625,105 @@ if (searchInput) {
                 }
                 
                 if (itemText) {
-                    const text = itemText.textContent.toLowerCase();
-                    // Проверяем, что все слова поиска присутствуют в элементе
-                    const allWordsFound = searchWords.every(word => text.includes(word));
+                    const text = itemText.textContent;
+                    const textLower = text.toLowerCase();
                     
-                    if (text.trim() === '') {
-                        item.style.display = 'none'; // Временно скрываем пустые
-                    } else if (allWordsFound) {
-                        item.style.display = ''; // Показываем совпадающие
+                    // Полностью скрываем информационные элементы при поиске
+                    if (text.startsWith('«') || text.startsWith('Можно') || textLower.includes('информацию')) {
+                        item.style.display = 'none';
+                    } else if (text.trim() === '') {
+                        // Пустые элементы пока оставляем (обработаем их позже)
+                        item.style.display = '';
                     } else {
-                        item.style.display = 'none'; // Скрываем несовпадающие
+                        // Проверяем, что все слова поиска присутствуют в элементе
+                        const allWordsInElement = searchWords.every(word => textLower.includes(word));
+                        item.style.display = allWordsInElement ? '' : 'none';
                     }
                 }
             });
             
-            // Второй проход: для каждого товара показываем максимум один пустой разделитель
-            let lastShownCarName = null;
-            allDataItems.forEach((item, index) => {
-                let itemText = item.querySelector('.data__item-text');
-                if (!itemText) {
-                    itemText = item.querySelector('.data__item-text1');
-                }
+            // Второй проход: работаем по категориям, обрабатываем разделители правильно
+            allCategories.forEach(category => {
+                const categoryItems = Array.from(category.querySelectorAll('.data__item'));
                 
-                if (itemText && itemText.textContent.trim() === '') {
-                    // Это пустой элемент
-                    let carName = null;
-                    let hasKupyuBefore = false;
-                    let hasProdamAfter = false;
-                    
-                    // Ищем название товара из предыдущих видимых элементов
-                    for (let i = index - 1; i >= 0; i--) {
-                        const prevItem = allDataItems[i];
-                        let prevText = prevItem.querySelector('.data__item-text');
-                        if (!prevText) {
-                            prevText = prevItem.querySelector('.data__item-text1');
+                // Проверяем, нужны ли разделители для этой категории
+                const categoryTitle = category.querySelector('.title-text');
+                const categoryName = categoryTitle ? categoryTitle.textContent.trim() : '';
+                const noSeparatorCategories = ['Отказы', 'Полезное', 'Номера', 'Номера KZ - Казахстан', 'Номера BY - Беларусь', 'Номера GE - Грузия', 'Номера AM - Армения', 'Номера SRB - Сербия', 'Номера LT - Литва'];
+                const shouldShowSeparators = !noSeparatorCategories.includes(categoryName);
+                
+                if (!shouldShowSeparators) {
+                    // Для категорий без разделителей просто скрываем все пустые
+                    categoryItems.forEach(item => {
+                        let itemText = item.querySelector('.data__item-text');
+                        if (!itemText) {
+                            itemText = item.querySelector('.data__item-text1');
                         }
-                        if (prevText && prevText.textContent.trim() !== '') {
-                            const text = prevText.textContent.toLowerCase();
-                            if (prevItem.style.display !== 'none') {
-                                hasKupyuBefore = text.includes('куплю');
-                                // Извлекаем название товара (часть в кавычках)
-                                const match = text.match(/"([^"]+)"/);
-                                if (match) {
-                                    carName = match[1];
+                        
+                        if (itemText && itemText.textContent.trim() === '') {
+                            item.style.display = 'none';
+                        }
+                    });
+                } else {
+                    // Для категорий с разделителями: ищем блоки "куплю - пусто - продам"
+                    // Сначала скрываем ВСЕ пустые
+                    categoryItems.forEach(item => {
+                        let itemText = item.querySelector('.data__item-text');
+                        if (!itemText) {
+                            itemText = item.querySelector('.data__item-text1');
+                        }
+                        
+                        if (itemText && itemText.textContent.trim() === '') {
+                            item.style.display = 'none';
+                        }
+                    });
+                    
+                    // Теперь ищем структуру: последовательность видимых куплю -> пустая -> видимые продам
+                    let lastKupyuIndex = -1;
+                    
+                    for (let i = 0; i < categoryItems.length; i++) {
+                        const item = categoryItems[i];
+                        let itemText = item.querySelector('.data__item-text');
+                        if (!itemText) {
+                            itemText = item.querySelector('.data__item-text1');
+                        }
+                        
+                        if (!itemText) continue;
+                        
+                        const text = itemText.textContent;
+                        const isVisible = item.style.display !== 'none';
+                        const isEmpty = text.trim() === '';
+                        const isKupyu = text.toLowerCase().includes('куплю');
+                        const isProdam = text.toLowerCase().includes('продам');
+                        
+                        if (isVisible && isKupyu) {
+                            // Нашли видимое куплю
+                            lastKupyuIndex = i;
+                        } else if (isVisible && isProdam && lastKupyuIndex >= 0) {
+                            // Нашли видимое продам после куплю
+                            // Ищем пустую между ними и показываем только одну
+                            let found = false;
+                            for (let j = lastKupyuIndex + 1; j < i; j++) {
+                                const betweenItem = categoryItems[j];
+                                let betweenText = betweenItem.querySelector('.data__item-text');
+                                if (!betweenText) {
+                                    betweenText = betweenItem.querySelector('.data__item-text1');
+                                }
+                                
+                                if (betweenText && betweenText.textContent.trim() === '') {
+                                    if (!found) {
+                                        // Показываем только первую пустую
+                                        betweenItem.style.display = '';
+                                        found = true;
+                                    }
                                 }
                             }
-                            break;
+                            // После продама сбрасываем lastKupyuIndex
+                            lastKupyuIndex = -1;
+                        } else if (!isVisible && !isEmpty && isKupyu) {
+                            // Скрытое куплю - сбрасываем lastKupyuIndex
+                            lastKupyuIndex = -1;
                         }
-                    }
-                    
-                    // Ищем видимый "Продам" после пустого элемента
-                    for (let i = index + 1; i < allDataItems.length; i++) {
-                        const nextItem = allDataItems[i];
-                        let nextText = nextItem.querySelector('.data__item-text');
-                        if (!nextText) {
-                            nextText = nextItem.querySelector('.data__item-text1');
-                        }
-                        if (nextText && nextText.textContent.trim() !== '') {
-                            const text = nextText.textContent.toLowerCase();
-                            if (nextItem.style.display !== 'none') {
-                                hasProdamAfter = text.includes('продам');
-                                // Проверяем, что это тот же товар
-                                const match = text.match(/"([^"]+)"/);
-                                if (match && match[1] === carName) {
-                                    hasProdamAfter = true;
-                                } else {
-                                    hasProdamAfter = false;
-                                }
-                            }
-                            break;
-                        }
-                    }
-                    
-                    // Показываем пустой элемент только если он разделяет Куплю и Продам одного товара
-                    // и это первый такой разделитель для этого товара
-                    if (hasKupyuBefore && hasProdamAfter && carName && carName !== lastShownCarName) {
-                        item.style.display = '';
-                        lastShownCarName = carName;
-                    } else {
-                        item.style.display = 'none';
                     }
                 }
             });
