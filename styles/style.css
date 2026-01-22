@@ -1962,14 +1962,41 @@
            -ms-transform: translate(-50%, -50%);
                transform: translate(-50%, -50%);
        clip-path: polygon(5% 0%, 100% 0%, 99.7% 90%, 95.4% 100%, 0% 99.8%, 0% 10.3%);
-       z-index: 1; }
+       z-index: 1; 
+       transition: background-color 0.3s ease; }
      .legend__item-text {
        position: relative;
        display: block;
        font-weight: bold;
        font-size: 18px;
        color: white;
-       z-index: 2; }
+       z-index: 2;
+       transition: color 0.3s ease; }
+
+html.light-theme .legend__item-background {
+  background: white !important;
+}
+
+html.light-theme .legend__item::before {
+  background-color: #262932 !important;
+}
+
+html.light-theme .legend__item-text {
+  color: black !important;
+}
+
+/* Тёмная тема (по умолчанию) */
+.legend__item-background {
+  transition: background-color 0.3s ease;
+}
+
+.legend__item::before {
+  transition: background-color 0.3s ease;
+}
+
+.legend__item-text {
+  transition: color 0.3s ease;
+}
  
  .data {
    margin: 60px 0; }
@@ -2050,7 +2077,117 @@
                filter: drop-shadow(0 1px 15px #0089ED); }
        .data__item--active::before {
          background-color: #0089ED; }
+
+/* Светлая тема для data__item */
+html.light-theme .data__item-text {
+  color: black !important;
+}
+
+html.light-theme .data__item::before {
+  background: #1B1E26 !important;
+}
+
+html.light-theme .data__item::after {
+  background-color: white !important;
+}
+
+/* Темная тема для data__item (по умолчанию) */
+.data__item::before {
+  background: white !important;
+}
+
+.data__item::after {
+  background-color: #262932 !important;
+}
+       -webkit-filter: drop-shadow(0 1px 15px #0089ED);
+               filter: drop-shadow(0 1px 15px #0089ED); }
+       .data__item--active::before {
+         background-color: #0089ED; }
  .header__logo-icon {
   margin-left: 25px;  
  }
+
+/* ===== Переменные для тем ===== */
+:root {
+  --bg-primary: #1B1E26;
+  --text-primary: #FFFFFF;
+  --border-color: #1B1E26;
+  --category-text: #FFFFFF;
+}
+
+html.light-theme {
+  --bg-primary: #FFFFFF;
+  --text-primary: #1B1E26;
+  --border-color: #1B1E26;
+  --category-text: #000000;
+}
+
+/* Применение переменных */
+body {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.data__item-text,
+.data__item-text1 {
+  color: var(--text-primary) !important;
+}
+
+.data__item {
+  border-color: var(--border-color) !important;
+}
+
+
+
+.title-text,
+.title__wrapper {
+  color: var(--category-text) !important;
+}
+
+/* ===== Стиль для кнопки переключения темы ===== */
+.theme-toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0089ED !important;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 137, 237, 0.4);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 137, 237, 0.6);
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+.theme-icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .theme-toggle-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    top: 15px;
+    right: 15px;
+  }
+}
+ 
  

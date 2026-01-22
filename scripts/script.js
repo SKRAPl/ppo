@@ -6728,3 +6728,50 @@ if (searchInput) {
         }
     });
 }
+
+// ===== Переключение темы =====
+document.addEventListener('DOMContentLoaded', function() {
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+    const themeIcon = document.querySelector('.theme-icon');
+    
+    // Получаем сохраненную тему из localStorage или используем темную по умолчанию
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    
+    // Применяем сохраненную тему при загрузке
+    if (savedTheme === 'light') {
+        htmlElement.classList.add('light-theme');
+        if (themeIcon) {
+            themeIcon.textContent = '☀️';
+        }
+        console.log('Light theme applied');
+    } else {
+        htmlElement.classList.remove('light-theme');
+        if (themeIcon) {
+            themeIcon.textContent = '🌙';
+        }
+        console.log('Dark theme applied');
+    }
+    
+    // Обработчик клика по кнопке переключения темы
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function() {
+            htmlElement.classList.toggle('light-theme');
+            
+            // Определяем текущую тему
+            const isLightTheme = htmlElement.classList.contains('light-theme');
+            
+            // Сохраняем тему в localStorage
+            localStorage.setItem('theme', isLightTheme ? 'light' : 'dark');
+            
+            // Обновляем иконку
+            if (themeIcon) {
+                themeIcon.textContent = isLightTheme ? '☀️' : '🌙';
+            }
+            
+            console.log('Theme toggled to:', isLightTheme ? 'light' : 'dark');
+            console.log('html class:', htmlElement.className);
+        });
+    }
+});
+
