@@ -6749,6 +6749,24 @@ if (searchInput) {
     });
 }
 
+if (searchInput) {
+    document.addEventListener('keydown', function(e) {
+        if (document.activeElement === searchInput) return;
+        const t = e.target;
+        const tag = t && t.tagName;
+        const isEditable = t && (t.isContentEditable || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT');
+        if (isEditable) return;
+        if (e.ctrlKey || e.metaKey || e.altKey) return;
+        if (e.key && e.key.length === 1) {
+            e.preventDefault();
+            searchInput.focus();
+            searchInput.value = e.key;
+            const ev = new Event('input', { bubbles: true });
+            searchInput.dispatchEvent(ev);
+        }
+    });
+}
+
 // ===== Переключение темы =====
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggleBtn = document.getElementById('theme-toggle');
