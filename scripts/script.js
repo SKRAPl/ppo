@@ -6813,3 +6813,228 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+
+
+// ============================================
+// ���������� �������������� ��������� ������ (��� - ����������� ����)
+// ============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+  const dataItems = document.querySelectorAll('.data__item');
+
+  // Получаем существующий редактор (создаем если не существует)
+  let editor = document.getElementById('data-item-editor');
+  if (!editor) {
+    editor = document.createElement('div');
+    editor.id = 'data-item-editor';
+    editor.className = 'data__item-editor';
+    document.body.appendChild(editor);
+  }
+
+  // Получаем оверлей для затемнения фона
+  let overlay = document.getElementById('data-item-editor-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'data-item-editor-overlay';
+    overlay.className = 'data__item-editor-overlay';
+    document.body.appendChild(overlay);
+  }
+
+  let currentEditingItem = null;
+  let originalText = '';
+
+  // Функция для открытия редактора
+  function openEditor(item) {
+    const textSpan = item.querySelector('.data__item-text');
+    if (!textSpan) return;
+
+    originalText = textSpan.textContent;
+    currentEditingItem = item;
+
+    // Очищаем предыдущее содержимое редактора
+    editor.innerHTML = '';
+
+    // Создаем главный контейнер для редактора и боковых кнопок
+    const editorContentWrapper = document.createElement('div');
+    editorContentWrapper.className = 'data__item-editor-content-wrapper';
+
+    // Контейнер для textarea и кнопок управления
+    const editorLeftSide = document.createElement('div');
+    editorLeftSide.className = 'data__item-editor-left-side';
+
+    // Создаем textarea
+    const textarea = document.createElement('textarea');
+    textarea.value = originalText;
+    textarea.spellcheck = false;
+
+    // Создаем контейнер кнопок управления
+    const buttonContainer = document.createElement('div');
+    buttonContainer.className = 'data__item-editor-buttons';
+
+    // Кнопка копирования
+    const copyBtn = document.createElement('button');
+    copyBtn.className = 'data__item-editor-btn data__item-editor-btn--copy';
+    copyBtn.textContent = 'Скопировать в буфер обмена';
+    copyBtn.onclick = function(e) {
+      e.stopPropagation();
+      copyEditorText(textarea, copyBtn);
+    };
+
+    // Кнопка закрытия
+    const cancelBtn = document.createElement('button');
+    cancelBtn.className = 'data__item-editor-btn data__item-editor-btn--cancel';
+    cancelBtn.textContent = 'Закрыть';
+    cancelBtn.onclick = function(e) {
+      e.stopPropagation();
+      closeEditor();
+    };
+
+    buttonContainer.appendChild(copyBtn);
+    buttonContainer.appendChild(cancelBtn);
+
+    editorLeftSide.appendChild(textarea);
+    editorLeftSide.appendChild(buttonContainer);
+
+    editorContentWrapper.appendChild(editorLeftSide);
+
+    // Проверяем наличие "а/м" в тексте
+    const hasAM = originalText.toLowerCase().includes('а/м');
+
+    // Добавляем боковые кнопки если есть а/м
+    if (hasAM) {
+      const amButtonsContainer = document.createElement('div');
+      amButtonsContainer.className = 'data__item-editor-am-buttons-side';
+
+      const amVariants = ['FT', 'DT', 'ET'];
+      amVariants.forEach((variant) => {
+        const btn = document.createElement('button');
+        btn.className = 'data__item-editor-btn data__item-editor-btn--am';
+        btn.textContent = variant;
+        btn.dataset.variant = variant;
+        btn.onclick = function(e) {
+          e.stopPropagation();
+          selectAMVariant(textarea, variant, amButtonsContainer);
+        };
+        amButtonsContainer.appendChild(btn);
+      });
+
+      editorContentWrapper.appendChild(amButtonsContainer);
+    }
+
+    editor.appendChild(editorContentWrapper);
+
+    // Отображаем редактор и оверлей
+    editor.classList.add('show');
+    overlay.classList.add('show');
+
+    // Фокус на textarea
+    setTimeout(() => textarea.focus(), 50);
+
+    item.classList.add('data__item--editing');
+  }
+  
+  // Функция для выбора варианта AM (заменяет другие варианты)
+  function selectAMVariant(textarea, variant, containerWithButtons) {
+    let currentValue = textarea.value;
+
+    // Ищем последнюю закрывающую кавычку
+    const lastQuoteIndex = currentValue.lastIndexOf('"');
+    if (lastQuoteIndex !== -1) {
+      // Берём текст после кавычки
+      const afterQuote = currentValue.slice(lastQuoteIndex + 1);
+
+      // Удаляем старый вариант (FT/DT/ET) и лишние пробелы после кавычки
+      const cleanedAfterQuote = afterQuote.replace(/^\s*(FT|DT|ET)?\s*/, '');
+
+      // Собираем новый текст: всё до кавычки + кавычка + пробел + новый вариант + остальной текст
+      currentValue = currentValue.slice(0, lastQuoteIndex + 1) + ' ' + variant + cleanedAfterQuote;
+    }
+
+    textarea.value = currentValue;
+
+    // Обновляем активный класс на кнопках
+    const allAmButtons = containerWithButtons.querySelectorAll('.data__item-editor-btn--am');
+    allAmButtons.forEach(btn => {
+      if (btn.dataset.variant === variant) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    textarea.focus();
+  }
+
+  // Функция для закрытия редактора
+  function closeEditor() {
+    editor.classList.remove('show');
+    overlay.classList.remove('show');
+    if (currentEditingItem) {
+      currentEditingItem.classList.remove('data__item--editing');
+    }
+    currentEditingItem = null;
+    originalText = '';
+  }
+  
+  // Функция для копирования текста из редактора
+  function copyEditorText(textarea, btn) {
+    const text = textarea.value.trim();
+    if (!text) return;
+
+    navigator.clipboard.writeText(text).then(() => {
+      const originalText = btn.textContent;
+      btn.textContent = 'Скопировано!';
+      btn.classList.add('copied');
+
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.classList.remove('copied');
+      }, 2000);
+    }).catch(() => {
+      // Fallback для старых браузеров
+      const tempTextarea = document.createElement('textarea');
+      tempTextarea.value = text;
+      document.body.appendChild(tempTextarea);
+      tempTextarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempTextarea);
+
+      const originalText = btn.textContent;
+      btn.textContent = 'Скопировано!';
+      btn.classList.add('copied');
+
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  }
+  
+  // Обработка контекстного меню (ПКМ)
+  dataItems.forEach((item) => {
+    item.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+      openEditor(this);
+      return false;
+    });
+  });
+  
+  // Обработка нажатия клавиши ESC
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && currentEditingItem) {
+      closeEditor();
+    }
+  });
+
+  // Закрытие редактора при клике на оверлей
+  overlay.addEventListener('click', function() {
+    closeEditor();
+  });
+
+  // Дополнительная обработка двойного клика - открыть меню
+  dataItems.forEach((item) => {
+    item.addEventListener('dblclick', function(e) {
+      openEditor(this);
+    });
+  });
+});
