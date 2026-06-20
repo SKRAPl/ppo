@@ -6899,9 +6899,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Проверяем наличие "а/м" в тексте
     const hasAM = originalText.toLowerCase().includes('а/м');
+    const hasMOTO = originalText.toLowerCase().includes('мотоцикл');
 
     // Добавляем боковые кнопки если есть а/м
-    if (hasAM) {
+    if (hasAM || hasMOTO) {
       const amButtonsContainer = document.createElement('div');
       amButtonsContainer.className = 'data__item-editor-am-buttons-side';
 
