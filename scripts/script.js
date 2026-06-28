@@ -6815,10 +6815,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// ============================================
-// ���������� �������������� ��������� ������ (��� - ����������� ����)
-// ============================================
-
 document.addEventListener('DOMContentLoaded', function() {
   const dataItems = document.querySelectorAll('.data__item');
 
@@ -6840,6 +6836,25 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.appendChild(overlay);
   }
 
+  // Стили для новых элементов
+  if (!document.getElementById('phrase-row-styles')) {
+    const style = document.createElement('style');
+    style.id = 'phrase-row-styles';
+    style.textContent = `
+      .data__item-editor-outer-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .data__item-editor-phrase-row {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
   let currentEditingItem = null;
   let originalText = '';
 
@@ -6853,6 +6868,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Очищаем предыдущее содержимое редактора
     editor.innerHTML = '';
+
+    // Создаем внешний обёртка (фразы сверху + редактор снизу)
+    const editorOuterWrapper = document.createElement('div');
+    editorOuterWrapper.className = 'data__item-editor-outer-wrapper';
 
     // Создаем главный контейнер для редактора и боковых кнопок
     const editorContentWrapper = document.createElement('div');
@@ -6895,6 +6914,31 @@ document.addEventListener('DOMContentLoaded', function() {
     editorLeftSide.appendChild(textarea);
     editorLeftSide.appendChild(buttonContainer);
 
+    // Строка кнопок-фраз над редактором (теперь textarea уже существует)
+    const phraseButtonsRow = document.createElement('div');
+    phraseButtonsRow.className = 'data__item-editor-phrase-row';
+
+    const phrases = [
+      { label: 'Возможен торг', text: 'Возможен торг.' },
+      { label: 'Возможен обмен', text: 'Возможен обмен.' },
+      { label: 'Писать СМС', text: 'Писать СМС.' },
+    ];
+    phrases.forEach(({ label, text }) => {
+      const btn = document.createElement('button');
+      btn.className = 'data__item-editor-btn data__item-editor-btn--am';
+      btn.textContent = label;
+      btn.dataset.phrase = text;
+      if (textarea.value.includes(text)) {
+        btn.classList.add('active');
+      }
+      btn.onclick = function(e) {
+        e.stopPropagation();
+        togglePhrase(textarea, text, btn);
+      };
+      phraseButtonsRow.appendChild(btn);
+    });
+
+    editorOuterWrapper.appendChild(phraseButtonsRow);
     editorContentWrapper.appendChild(editorLeftSide);
 
     // Проверяем наличие "а/м" в тексте
@@ -6922,7 +6966,8 @@ document.addEventListener('DOMContentLoaded', function() {
       editorContentWrapper.appendChild(amButtonsContainer);
     }
 
-    editor.appendChild(editorContentWrapper);
+    editorOuterWrapper.appendChild(editorContentWrapper);
+    editor.appendChild(editorOuterWrapper);
 
     // Отображаем редактор и оверлей
     editor.classList.add('show');
@@ -6936,33 +6981,57 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Функция для выбора варианта AM (заменяет другие варианты)
   function selectAMVariant(textarea, variant, containerWithButtons) {
+    const isActive = containerWithButtons.querySelector(`[data-variant="${variant}"]`)?.classList.contains('active');
     let currentValue = textarea.value;
 
-    // Ищем последнюю закрывающую кавычку
     const lastQuoteIndex = currentValue.lastIndexOf('"');
     if (lastQuoteIndex !== -1) {
-      // Берём текст после кавычки
       const afterQuote = currentValue.slice(lastQuoteIndex + 1);
-
-      // Удаляем старый вариант (FT/DT/ET) и лишние пробелы после кавычки
       const cleanedAfterQuote = afterQuote.replace(/^\s*(FT|DT|ET)?\s*/, '');
 
-      // Собираем новый текст: всё до кавычки + кавычка + пробел + новый вариант + остальной текст
-      currentValue = currentValue.slice(0, lastQuoteIndex + 1) + ' ' + variant + cleanedAfterQuote;
+      if (isActive) {
+        // Убираем вариант — оставляем только то что до кавычки
+        currentValue = currentValue.slice(0, lastQuoteIndex + 1) + cleanedAfterQuote;
+      } else {
+        // Добавляем новый вариант
+        currentValue = currentValue.slice(0, lastQuoteIndex + 1) + ' ' + variant + cleanedAfterQuote;
+      }
     }
 
     textarea.value = currentValue;
 
-    // Обновляем активный класс на кнопках
     const allAmButtons = containerWithButtons.querySelectorAll('.data__item-editor-btn--am');
     allAmButtons.forEach(btn => {
-      if (btn.dataset.variant === variant) {
+      if (btn.dataset.variant === variant && !isActive) {
         btn.classList.add('active');
       } else {
         btn.classList.remove('active');
       }
     });
 
+    textarea.focus();
+  }
+
+  // Функция для переключения фразы в конце текста
+  function togglePhrase(textarea, phrase, btn) {
+    let text = textarea.value;
+
+    if (btn.classList.contains('active')) {
+      // Удаляем фразу (и пробел перед ней если есть)
+      text = text.replace(new RegExp('\\s*' + phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), '').trimEnd();
+      btn.classList.remove('active');
+    } else {
+      // Добавляем фразу в конец (через пробел если текст не пустой)
+      text = text.trimEnd();
+      if (text.length > 0) {
+        text += ' ' + phrase;
+      } else {
+        text = phrase;
+      }
+      btn.classList.add('active');
+    }
+
+    textarea.value = text;
     textarea.focus();
   }
 
