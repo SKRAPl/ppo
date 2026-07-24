@@ -1974,14 +1974,18 @@
        transition: color 0.3s ease; }
 
 html.light-theme .legend__item-background {
-  background: white !important;
+  background: #1B1E26 !important;
 }
 
 html.light-theme .legend__item::before {
-  background-color: #262932 !important;
+  background-color: white !important;
 }
 
 html.light-theme .legend__item-text {
+  color: black !important;
+}
+
+html.light-theme .legend__item {
   color: black !important;
 }
 
