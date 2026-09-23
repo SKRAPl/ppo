@@ -1,0 +1,182 @@
+[
+  {
+    "slug": "otkazy",
+    "title": "Отказы",
+    "parent": null,
+    "color": null
+  },
+  {
+    "slug": "poleznoe",
+    "title": "Полезное",
+    "parent": null,
+    "color": null
+  },
+  {
+    "slug": "nomera",
+    "title": "Номера",
+    "parent": null,
+    "color": null
+  },
+  {
+    "slug": "nomera-kz-kazahstan",
+    "title": "Номера KZ - Казахстан",
+    "parent": "nomera",
+    "color": null
+  },
+  {
+    "slug": "nomera-by-belarus",
+    "title": "Номера BY - Беларусь",
+    "parent": "nomera",
+    "color": null
+  },
+  {
+    "slug": "nomera-ge-gruziya",
+    "title": "Номера GE - Грузия",
+    "parent": "nomera",
+    "color": null
+  },
+  {
+    "slug": "nomera-am-armeniya",
+    "title": "Номера AM - Армения",
+    "parent": "nomera",
+    "color": null
+  },
+  {
+    "slug": "nomera-srb-serbiya",
+    "title": "Номера SRB - Сербия",
+    "parent": "nomera",
+    "color": null
+  },
+  {
+    "slug": "ryba",
+    "title": "Рыба",
+    "parent": null,
+    "color": null
+  },
+  {
+    "slug": "griby",
+    "title": "Грибы",
+    "parent": null,
+    "color": null
+  },
+  {
+    "slug": "avtomobili",
+    "title": "Автомобили",
+    "parent": null,
+    "color": null
+  },
+  {
+    "slug": "nabory-diskov",
+    "title": "Наборы дисков",
+    "parent": null,
+    "color": null
+  },
+  {
+    "slug": "nabory-diskov-metallik",
+    "title": "Наборы дисков металлик",
+    "parent": null,
+    "color": null
+  },
+  {
+    "slug": "nabory-diskov-karbon",
+    "title": "Наборы дисков карбон",
+    "parent": null,
+    "color": null
+  },
+  {
+    "slug": "velosipedy-motocikly",
+    "title": "Велосипеды/мотоциклы",
+    "parent": null,
+    "color": null
+  },
+  {
+    "slug": "cluzhebnyy-transport",
+    "title": "Cлужебный транспорт",
+    "parent": null,
+    "color": null
+  },
+  {
+    "slug": "vozdushnyy-transport",
+    "title": "Воздушный транспорт",
+    "parent": null,
+    "color": "green"
+  },
+  {
+    "slug": "vodnyy-transport",
+    "title": "Водный транспорт",
+    "parent": null,
+    "color": "green"
+  },
+  {
+    "slug": "predostavlyayu-uslugi",
+    "title": "Предоставляю услуги",
+    "parent": null,
+    "color": "yellow"
+  },
+  {
+    "slug": "trebuyutsya-uslugi",
+    "title": "Требуются услуги",
+    "parent": null,
+    "color": "yellow"
+  },
+  {
+    "slug": "flagi",
+    "title": "Флаги",
+    "parent": null,
+    "color": "red"
+  },
+  {
+    "slug": "odezhda",
+    "title": "Одежда",
+    "parent": null,
+    "color": null
+  },
+  {
+    "slug": "aksessuary",
+    "title": "Аксессуары",
+    "parent": null,
+    "color": null
+  },
+  {
+    "slug": "aksessuary-zhenskie",
+    "title": "Аксессуары Женские",
+    "parent": "aksessuary",
+    "color": null
+  },
+  {
+    "slug": "relikvii",
+    "title": "Реликвии",
+    "parent": null,
+    "color": null
+  },
+  {
+    "slug": "atributika",
+    "title": "Атрибутика",
+    "parent": null,
+    "color": null
+  },
+  {
+    "slug": "kvartiry",
+    "title": "Квартиры",
+    "parent": null,
+    "color": "red"
+  },
+  {
+    "slug": "doma",
+    "title": "Дома",
+    "parent": null,
+    "color": null
+  },
+  {
+    "slug": "biznes-nedvizhimost",
+    "title": "Бизнес недвижимость",
+    "parent": null,
+    "color": null
+  },
+  {
+    "slug": "biznesy",
+    "title": "Бизнесы",
+    "parent": null,
+    "color": null
+  }
+]

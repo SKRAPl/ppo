@@ -1,0 +1,74 @@
+{
+ "template": {
+  "0": {
+   "prefix": "Куплю диски \"",
+   "suffix": "\". Бюджет: Свободный."
+  },
+  "1": {
+   "prefix": "Куплю диски \"",
+   "suffix": "\". Бюджет: 1.000.000 рублей."
+  },
+  "2": {
+   "prefix": "Продам диски \"",
+   "suffix": "\". Цена: Договорная."
+  },
+  "3": {
+   "prefix": "Продам диски \"",
+   "suffix": "\". Цена: 1.000.000 рублей."
+  },
+  "nameWrapper": {
+   "prefix": "",
+   "suffix": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "entry",
+   "value": "BBS Super RC"
+  },
+  {
+   "type": "entry",
+   "value": "JP32"
+  },
+  {
+   "type": "entry",
+   "value": "Энкей 92"
+  },
+  {
+   "type": "entry",
+   "value": "VC XX"
+  },
+  {
+   "type": "entry",
+   "value": "Brix NC1"
+  },
+  {
+   "type": "entry",
+   "value": "Мансор YH.5"
+  },
+  {
+   "type": "entry",
+   "value": "HER 540C"
+  },
+  {
+   "type": "entry",
+   "value": "LKS17 3"
+  },
+  {
+   "type": "entry",
+   "value": "Мансор DH.5"
+  },
+  {
+   "type": "entry",
+   "value": "Мансор FT.15"
+  },
+  {
+   "type": "entry",
+   "value": "Брабос Моноблок М"
+  },
+  {
+   "type": "entry",
+   "value": "Бумер Ст 359"
+  }
+ ]
+}

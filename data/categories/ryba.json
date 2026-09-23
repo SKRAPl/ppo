@@ -1,0 +1,66 @@
+{
+ "template": {
+  "0": {
+   "prefix": "Куплю рыбу",
+   "suffix": ". Бюджет: Свободный."
+  },
+  "1": {
+   "prefix": "Куплю рыбу",
+   "suffix": ". Бюджет: 10.000 рублей."
+  },
+  "2": {
+   "prefix": "Продам рыбу",
+   "suffix": ". Цена: Договорная."
+  },
+  "3": {
+   "prefix": "Продам рыбу",
+   "suffix": ". Цена: 10.000 рублей."
+  },
+  "nameWrapper": {
+   "prefix": " \"",
+   "suffix": "\""
+  }
+ },
+ "blocks": [
+  {
+   "type": "entry",
+   "value": ""
+  },
+  {
+   "type": "entry",
+   "value": "Щука"
+  },
+  {
+   "type": "entry",
+   "value": "Сом"
+  },
+  {
+   "type": "entry",
+   "value": "Язь"
+  },
+  {
+   "type": "entry",
+   "value": "Плотва"
+  },
+  {
+   "type": "entry",
+   "value": "Ёрш"
+  },
+  {
+   "type": "entry",
+   "value": "Лещ"
+  },
+  {
+   "type": "entry",
+   "value": "Жирный Карп"
+  },
+  {
+   "type": "entry",
+   "value": "Форель"
+  },
+  {
+   "type": "entry",
+   "value": "Осётр"
+  }
+ ]
+}

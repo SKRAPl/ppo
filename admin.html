@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Админка · Таблица ППО</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <div class="brand">Таблица ППО <small>Админка</small></div>
+    <nav style="display:flex; gap:10px; align-items:center;">
+      <a href="index.html" style="font-size:13px; color:var(--text-1);">← На сайт</a>
+      <span id="githubStatus"></span>
+      <span id="whoami" class="pill accent" style="display:none;"></span>
+      <button id="logoutBtn" style="display:none;">Выйти</button>
+    </nav>
+  </div>
+</header>
+
+<div id="loadingScreen" class="login-screen">
+  <div class="card" style="max-width:360px; text-align:center;">
+    <h3>Загрузка данных…</h3>
+    <p class="sub">Подтягиваю категории и пользователей из репозитория.</p>
+  </div>
+</div>
+
+<div id="loginScreen" class="login-screen" style="display:none;">
+  <div class="card login-card">
+    <h1>Вход в админку</h1>
+    <p class="sub">Введите логин и пароль, выданные администратором.</p>
+    <div id="loginError" class="login-error" style="display:none;"></div>
+    <form id="loginForm">
+      <div class="field">
+        <label for="loginUsername">Логин</label>
+        <input type="text" id="loginUsername" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label for="loginPassword">Пароль</label>
+        <input type="password" id="loginPassword" autocomplete="current-password" required>
+      </div>
+      <button class="primary" type="submit" style="width:100%;">Войти</button>
+    </form>
+  </div>
+</div>
+
+<div id="adminShell" class="admin-shell" style="display:none;">
+  <nav class="admin-nav" id="adminNav"></nav>
+  <main class="admin-main" id="adminMain"></main>
+</div>
+
+<div id="modalRoot"></div>
+<div class="toast-stack" id="toastStack"></div>
+
+<script src="js/github.js"></script>
+<script src="js/store.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

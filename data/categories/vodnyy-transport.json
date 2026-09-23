@@ -1,0 +1,66 @@
+{
+ "template": {
+  "0": {
+   "prefix": "Куплю ",
+   "suffix": "\". Бюджет: Свободный."
+  },
+  "1": {
+   "prefix": "Куплю ",
+   "suffix": "\". Бюджет: 1.000.000 рублей."
+  },
+  "2": {
+   "prefix": "Продам ",
+   "suffix": "\". Цена: Договорная."
+  },
+  "3": {
+   "prefix": "Продам ",
+   "suffix": "\". Цена: 1.000.000 рублей."
+  },
+  "nameWrapper": {
+   "prefix": "",
+   "suffix": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "entry",
+   "value": "лодку \"Suntrap"
+  },
+  {
+   "type": "entry",
+   "value": "катер \"Seashark"
+  },
+  {
+   "type": "entry",
+   "value": "катер \"Dinghy"
+  },
+  {
+   "type": "entry",
+   "value": "катер \"Tropic"
+  },
+  {
+   "type": "entry",
+   "value": "катер \"Squalo"
+  },
+  {
+   "type": "entry",
+   "value": "катер \"Jetmax"
+  },
+  {
+   "type": "entry",
+   "value": "катер \"Speeder"
+  },
+  {
+   "type": "entry",
+   "value": "катер \"Longfin"
+  },
+  {
+   "type": "entry",
+   "value": "катер \"Гидра"
+  },
+  {
+   "type": "entry",
+   "value": "яхту \"Спортфиш"
+  }
+ ]
+}

@@ -1,0 +1,138 @@
+{
+ "template": {
+  "0": {
+   "prefix": "Куплю ",
+   "suffix": "\". Бюджет: Свободный."
+  },
+  "1": {
+   "prefix": "Куплю ",
+   "suffix": "\". Бюджет: 1.000.000 рублей."
+  },
+  "2": {
+   "prefix": "Продам ",
+   "suffix": "\". Цена: Договорная."
+  },
+  "3": {
+   "prefix": "Продам ",
+   "suffix": "\". Цена: 1.000.000 рублей."
+  },
+  "nameWrapper": {
+   "prefix": "",
+   "suffix": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "entry",
+   "value": "велосипед \"BMX"
+  },
+  {
+   "type": "entry",
+   "value": "велосипед \"Tri-Cycles Race Bike"
+  },
+  {
+   "type": "entry",
+   "value": "велосипед \"Scorcher"
+  },
+  {
+   "type": "entry",
+   "value": "велосипед \"Whippet Race Bike"
+  },
+  {
+   "type": "entry",
+   "value": "велосипед \"Endurex Race Bike"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"Юпитер"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"У-6736"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"Bagger"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"Sanchez"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"Daemon"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"Avarus"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"Zombie Chooper"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"Innovation"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"FCR 1000"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"Nightblade"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"Diablous Custom"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"Akuma"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"Gargoyle"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"Bati 801"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"Defiler"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"Hakuchou"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"Double T"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"Vortex"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"Chimera"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"Sanctus"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"Харлей Фэтбой"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"Бумер 1000"
+  },
+  {
+   "type": "entry",
+   "value": "мотоцикл \"Ретро-Харлей"
+  }
+ ]
+}

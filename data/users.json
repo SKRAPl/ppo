@@ -1,0 +1,15 @@
+[
+  {
+    "username": "PolkaX",
+    "salt": "6079643fb6d557bb8b047e39205055b7",
+    "passHash": "31e1b7b9ea99d88b247656347ea7690df01f7e3c60c3478afcab528bc74e324a",
+    "permissions": {
+      "isSuper": true,
+      "canManageUsers": true,
+      "canManageCategories": true,
+      "categories": {}
+    },
+    "createdAt": 1789359874086,
+    "isMaster": true
+  }
+]

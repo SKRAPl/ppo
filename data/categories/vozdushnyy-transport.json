@@ -1,0 +1,50 @@
+{
+ "template": {
+  "0": {
+   "prefix": "Куплю вертолет \"",
+   "suffix": "\". Бюджет: Свободный."
+  },
+  "1": {
+   "prefix": "Куплю вертолет \"",
+   "suffix": "\". Бюджет: 1.000.000 рублей."
+  },
+  "2": {
+   "prefix": "Продам вертолет \"",
+   "suffix": "\". Цена: Договорная."
+  },
+  "3": {
+   "prefix": "Продам вертолет \"",
+   "suffix": "\". Цена: 1.000.000 рублей."
+  },
+  "nameWrapper": {
+   "prefix": "",
+   "suffix": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "entry",
+   "value": "Havok"
+  },
+  {
+   "type": "entry",
+   "value": "Мэверик"
+  },
+  {
+   "type": "entry",
+   "value": "Frogger"
+  },
+  {
+   "type": "entry",
+   "value": "Списанный Buzzard"
+  },
+  {
+   "type": "entry",
+   "value": "Supervolito"
+  },
+  {
+   "type": "entry",
+   "value": "Cвифт Делюкс"
+  }
+ ]
+}

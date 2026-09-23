@@ -1,0 +1,1646 @@
+{
+  "template": {
+    "0": {
+      "prefix": "Куплю а/м \"",
+      "suffix": "\". Бюджет: Свободный."
+    },
+    "1": {
+      "prefix": "Куплю а/м \"",
+      "suffix": "\". Бюджет: 1.000.000 рублей."
+    },
+    "2": {
+      "prefix": "Продам а/м \"",
+      "suffix": "\". Цена: Договорная."
+    },
+    "3": {
+      "prefix": "Продам а/м \"",
+      "suffix": "\". Цена: 1.000.000 рублей."
+    },
+    "nameWrapper": {
+      "prefix": "",
+      "suffix": ""
+    }
+  },
+  "blocks": [
+    {
+      "type": "entry",
+      "value": "РР Спектр"
+    },
+    {
+      "type": "entry",
+      "value": "Бент Бакалар 2022"
+    },
+    {
+      "type": "entry",
+      "value": "Кёниг Гемера"
+    },
+    {
+      "type": "entry",
+      "value": "Кёниг Гемера 2025"
+    },
+    {
+      "type": "entry",
+      "value": "Ферра Дайтона СП 3"
+    },
+    {
+      "type": "entry",
+      "value": "Ферра Ф40"
+    },
+    {
+      "type": "entry",
+      "value": "МБ АМГ ГТ Блек"
+    },
+    {
+      "type": "entry",
+      "value": "МБ Цэшка Эстейт"
+    },
+    {
+      "type": "entry",
+      "value": "МБ Ц63С АМГ Перфоманс"
+    },
+    {
+      "type": "entry",
+      "value": "Ранглер Рубик"
+    },
+    {
+      "type": "entry",
+      "value": "Кабрио Властелин Колец Ретро"
+    },
+    {
+      "type": "entry",
+      "value": "Буггате Сентодиечи"
+    },
+    {
+      "type": "entry",
+      "value": "Паджерик 97 Эво"
+    },
+    {
+      "type": "entry",
+      "value": "Четырка"
+    },
+    {
+      "type": "entry",
+      "value": "Двенашка"
+    },
+    {
+      "type": "entry",
+      "value": "Двенашка (Купе)"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер X4 2023"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер М5 КС"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер М4 Ф82 КС"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер М5 Г90 2024"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер X3"
+    },
+    {
+      "type": "entry",
+      "value": "Калина 1 Хэтч"
+    },
+    {
+      "type": "entry",
+      "value": "Калина 2 Хэтч"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер Ешка 34"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер Ешка 38"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер Икс Шестой"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер I8"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер X-5 Тип 53"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер Z4"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер М3 Классика"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер М3 2006"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер М3 Туринг"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер М3 Е36"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер М4-2022"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер М8"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер М635"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер X-7"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер Е36 Ракета"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер 2002 Турбо"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер 760X"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер М5"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер X5M"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер Е64 Кабрио"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер М2 2023"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер XM"
+    },
+    {
+      "type": "entry",
+      "value": "Джимни Пж-20"
+    },
+    {
+      "type": "entry",
+      "value": "Фолькс Кафер"
+    },
+    {
+      "type": "entry",
+      "value": "ЗАЗИК 965"
+    },
+    {
+      "type": "entry",
+      "value": "Гелик Мини"
+    },
+    {
+      "type": "entry",
+      "value": "Гладиатор"
+    },
+    {
+      "type": "entry",
+      "value": "Жига 2105"
+    },
+    {
+      "type": "entry",
+      "value": "Тойода Крузак 200"
+    },
+    {
+      "type": "entry",
+      "value": "Тойода Крузак FJ"
+    },
+    {
+      "type": "entry",
+      "value": "Купер"
+    },
+    {
+      "type": "line",
+      "text": "Куплю а/м \"Лекс IS300.\"\" Бюджет: Свободный."
+    },
+    {
+      "type": "line",
+      "text": "Куплю а/м \"Лекс IS300\". Бюджет: 1.000.000 рублей."
+    },
+    {
+      "type": "line",
+      "text": ""
+    },
+    {
+      "type": "line",
+      "text": "Продам а/м \"Лекс IS300\". Цена: Договорная."
+    },
+    {
+      "type": "line",
+      "text": "Продам а/м \"Лекс IS300\". Цена: 1.000.000 рублей."
+    },
+    {
+      "type": "entry",
+      "value": "Лекс LX-1999"
+    },
+    {
+      "type": "entry",
+      "value": "Лекс LX-2018"
+    },
+    {
+      "type": "entry",
+      "value": "Лекс RCF"
+    },
+    {
+      "type": "entry",
+      "value": "Тойода Самурай МК2"
+    },
+    {
+      "type": "entry",
+      "value": "Цивик ЕК9"
+    },
+    {
+      "type": "line",
+      "text": "Куплю а/м \"МБ Электрогелик\". Бюджет: Свободный"
+    },
+    {
+      "type": "line",
+      "text": "Куплю а/м \"МБ Электрогелик\". Бюджет: 1.000.000 рублей."
+    },
+    {
+      "type": "line",
+      "text": ""
+    },
+    {
+      "type": "line",
+      "text": "Продам а/м \"МБ Электрогелик\". Цена: Договорная."
+    },
+    {
+      "type": "line",
+      "text": "Продам а/м \"МБ Электрогелик\". Цена: 1.000.000 рублей."
+    },
+    {
+      "type": "entry",
+      "value": "206 GTI"
+    },
+    {
+      "type": "entry",
+      "value": "Ниса 350-Z"
+    },
+    {
+      "type": "entry",
+      "value": "Поршак 911-Ретро Дрэг-Кинг"
+    },
+    {
+      "type": "entry",
+      "value": "Поршак 911-й Турбо"
+    },
+    {
+      "type": "entry",
+      "value": "969М Волынь"
+    },
+    {
+      "type": "entry",
+      "value": "H1"
+    },
+    {
+      "type": "entry",
+      "value": "Тойода V-50 Камрюха"
+    },
+    {
+      "type": "entry",
+      "value": "Тойода Камрюха Семидесятка"
+    },
+    {
+      "type": "entry",
+      "value": "Авента - Ультимейт"
+    },
+    {
+      "type": "entry",
+      "value": "Альфа - Кабрио"
+    },
+    {
+      "type": "entry",
+      "value": "Альфа Джулия ГТАм"
+    },
+    {
+      "type": "entry",
+      "value": "Бент Бентаига"
+    },
+    {
+      "type": "entry",
+      "value": "БН-Муллинер"
+    },
+    {
+      "type": "entry",
+      "value": "Хантер (Экспедиция)"
+    },
+    {
+      "type": "entry",
+      "value": "Хантер 4х4"
+    },
+    {
+      "type": "entry",
+      "value": "Буханка"
+    },
+    {
+      "type": "entry",
+      "value": "Буханка (Экспедиция)"
+    },
+    {
+      "type": "entry",
+      "value": "Восьмерка Ретро"
+    },
+    {
+      "type": "entry",
+      "value": "МБ Г65 2014"
+    },
+    {
+      "type": "entry",
+      "value": "Гольф"
+    },
+    {
+      "type": "entry",
+      "value": "130-й ХотРод"
+    },
+    {
+      "type": "entry",
+      "value": "Шевик Камаро"
+    },
+    {
+      "type": "entry",
+      "value": "Камаро-Ретро"
+    },
+    {
+      "type": "entry",
+      "value": "Буггате Мистраль"
+    },
+    {
+      "type": "entry",
+      "value": "Каптива"
+    },
+    {
+      "type": "entry",
+      "value": "Катафалк"
+    },
+    {
+      "type": "entry",
+      "value": "Континенталь"
+    },
+    {
+      "type": "entry",
+      "value": "Шевик Корвет-23"
+    },
+    {
+      "type": "entry",
+      "value": "Шевик Корвет 1956"
+    },
+    {
+      "type": "entry",
+      "value": "Куллинан"
+    },
+    {
+      "type": "entry",
+      "value": "Ламба Кунташ 1988"
+    },
+    {
+      "type": "entry",
+      "value": "Риван Р1Т"
+    },
+    {
+      "type": "entry",
+      "value": "Нивасик 6х6"
+    },
+    {
+      "type": "entry",
+      "value": "Ламба Ярама"
+    },
+    {
+      "type": "entry",
+      "value": "Ламба Сц-20"
+    },
+    {
+      "type": "entry",
+      "value": "Ламба Мурселаго"
+    },
+    {
+      "type": "entry",
+      "value": "Ламба Урус Перфоманте"
+    },
+    {
+      "type": "entry",
+      "value": "Лачети"
+    },
+    {
+      "type": "entry",
+      "value": "МБ ГТ 63С"
+    },
+    {
+      "type": "entry",
+      "value": "Поршак Панама Турбо С Туризмо"
+    },
+    {
+      "type": "entry",
+      "value": "Ровер Дефендер 2023"
+    },
+    {
+      "type": "entry",
+      "value": "МБ Г500"
+    },
+    {
+      "type": "entry",
+      "value": "МБ Г500 Брабос"
+    },
+    {
+      "type": "entry",
+      "value": "МБ Кабан"
+    },
+    {
+      "type": "entry",
+      "value": "МБ Шестисотый ГЛС"
+    },
+    {
+      "type": "entry",
+      "value": "МБ СЛС АМГ"
+    },
+    {
+      "type": "entry",
+      "value": "МБ 45-А"
+    },
+    {
+      "type": "entry",
+      "value": "МБ Г63"
+    },
+    {
+      "type": "entry",
+      "value": "МБ 63 ЦЛС"
+    },
+    {
+      "type": "entry",
+      "value": "МБ 600 СЛ"
+    },
+    {
+      "type": "entry",
+      "value": "Фера 512 ТР"
+    },
+    {
+      "type": "entry",
+      "value": "МБ СЛР Мак"
+    },
+    {
+      "type": "entry",
+      "value": "МБ Икс-Класс"
+    },
+    {
+      "type": "entry",
+      "value": "МБ ЦЛА 45"
+    },
+    {
+      "type": "entry",
+      "value": "Мак 600-й"
+    },
+    {
+      "type": "entry",
+      "value": "Мак 765-й ЛТ"
+    },
+    {
+      "type": "entry",
+      "value": "Матиз"
+    },
+    {
+      "type": "entry",
+      "value": "Фордер Мустанг 2016"
+    },
+    {
+      "type": "entry",
+      "value": "Мустанг ретро"
+    },
+    {
+      "type": "entry",
+      "value": "Ока"
+    },
+    {
+      "type": "entry",
+      "value": "Ситруэн ВИТ 23"
+    },
+    {
+      "type": "line",
+      "text": "Куплю а/м \"Патриот\". Бюджет: Свободный"
+    },
+    {
+      "type": "line",
+      "text": "Куплю а/м \"Патриот\". Бюджет: 1.000.000 рублей."
+    },
+    {
+      "type": "line",
+      "text": ""
+    },
+    {
+      "type": "line",
+      "text": "Продам а/м \"Патриот\". Цена: Договорная."
+    },
+    {
+      "type": "line",
+      "text": "Продам а/м \"Патриот\". Цена: 1.000.000 рублей."
+    },
+    {
+      "type": "entry",
+      "value": "Приора"
+    },
+    {
+      "type": "entry",
+      "value": "МБ Пульман"
+    },
+    {
+      "type": "entry",
+      "value": "Аура Сенат"
+    },
+    {
+      "type": "entry",
+      "value": "Аура Комендант"
+    },
+    {
+      "type": "entry",
+      "value": "Аудитор Р8"
+    },
+    {
+      "type": "entry",
+      "value": "РР Сильвер-К"
+    },
+    {
+      "type": "entry",
+      "value": "Аудитор РС6 Авант"
+    },
+    {
+      "type": "entry",
+      "value": "Аудитор РС7"
+    },
+    {
+      "type": "entry",
+      "value": "Рабочий Грузовик"
+    },
+    {
+      "type": "entry",
+      "value": "Москович 423"
+    },
+    {
+      "type": "entry",
+      "value": "Ровер-СТ"
+    },
+    {
+      "type": "entry",
+      "value": "Аудитор С8"
+    },
+    {
+      "type": "entry",
+      "value": "Пятнашка"
+    },
+    {
+      "type": "entry",
+      "value": "Сиатор Родст"
+    },
+    {
+      "type": "entry",
+      "value": "Спринтер"
+    },
+    {
+      "type": "entry",
+      "value": "Кия Стингер ГТ"
+    },
+    {
+      "type": "line",
+      "text": "Куплю а/м \"Тойода Супра Классика\". Бюджет: Свободный"
+    },
+    {
+      "type": "line",
+      "text": "Куплю а/м \"Тойода Супра Классика\". Бюджет: 1.000.000 рублей."
+    },
+    {
+      "type": "line",
+      "text": ""
+    },
+    {
+      "type": "line",
+      "text": "Продам а/м \"Тойода Супра Классика\". Цена: Договорная."
+    },
+    {
+      "type": "line",
+      "text": "Продам а/м \"Тойода Супра Классика\". Цена: 1.000.000 рублей."
+    },
+    {
+      "type": "entry",
+      "value": "Тойода Супра Спорт"
+    },
+    {
+      "type": "entry",
+      "value": "Т Модель С"
+    },
+    {
+      "type": "entry",
+      "value": "Поршак Тайкан"
+    },
+    {
+      "type": "entry",
+      "value": "Ламба Урус"
+    },
+    {
+      "type": "entry",
+      "value": "Ф488"
+    },
+    {
+      "type": "entry",
+      "value": "Ф Пуросанга"
+    },
+    {
+      "type": "entry",
+      "value": "РР Фантом"
+    },
+    {
+      "type": "entry",
+      "value": "МБ Цэшка 63-Купе"
+    },
+    {
+      "type": "entry",
+      "value": "Фольксвагер Кармэн"
+    },
+    {
+      "type": "entry",
+      "value": "Хамер EV"
+    },
+    {
+      "type": "entry",
+      "value": "Хаммер Кена"
+    },
+    {
+      "type": "entry",
+      "value": "Ламба Хуракан"
+    },
+    {
+      "type": "entry",
+      "value": "Ламба Центарио"
+    },
+    {
+      "type": "entry",
+      "value": "Чайка"
+    },
+    {
+      "type": "entry",
+      "value": "Доджер Челленджер Рейд"
+    },
+    {
+      "type": "entry",
+      "value": "Доджер Челленджер"
+    },
+    {
+      "type": "entry",
+      "value": "Чироки"
+    },
+    {
+      "type": "entry",
+      "value": "Эво-9"
+    },
+    {
+      "type": "entry",
+      "value": "Эво-10"
+    },
+    {
+      "type": "entry",
+      "value": "Какдилак Эскалейд 2022"
+    },
+    {
+      "type": "entry",
+      "value": "Тойода Крузак 200 (Экспедиция)"
+    },
+    {
+      "type": "entry",
+      "value": "Тойода Крузак 300"
+    },
+    {
+      "type": "entry",
+      "value": "Аудитор Кабрио Ретро"
+    },
+    {
+      "type": "entry",
+      "value": "МБ Г900 Ракета"
+    },
+    {
+      "type": "entry",
+      "value": "Паганий Хуайра"
+    },
+    {
+      "type": "entry",
+      "value": "МБ Е63С АМГ В213"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер Альпина ДЗС"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер X3 M40i"
+    },
+    {
+      "type": "entry",
+      "value": "Ниса Сильвия С14 Коуки"
+    },
+    {
+      "type": "entry",
+      "value": "Аудитор ТТ МК1"
+    },
+    {
+      "type": "entry",
+      "value": "Ферра 355 Спайдер"
+    },
+    {
+      "type": "entry",
+      "value": "Ламба Венено Родст"
+    },
+    {
+      "type": "entry",
+      "value": "Тойода Крузак Прадо 150"
+    },
+    {
+      "type": "entry",
+      "value": "Аудитор А8 2018"
+    },
+    {
+      "type": "entry",
+      "value": "Мак Сенна"
+    },
+    {
+      "type": "entry",
+      "value": "Доджер Чарджер СРТ Хелкат"
+    },
+    {
+      "type": "entry",
+      "value": "Фордер Мустанг ФастБек ГТ"
+    },
+    {
+      "type": "entry",
+      "value": "Шевик Тахо 2002"
+    },
+    {
+      "type": "entry",
+      "value": "Фордер ГТ 2005"
+    },
+    {
+      "type": "entry",
+      "value": "Аудитор РС6 ГТ"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер М6 Ф13"
+    },
+    {
+      "type": "entry",
+      "value": "Ниса Скайлайн ГТР Р34"
+    },
+    {
+      "type": "entry",
+      "value": "МБ Ц32 АМГ"
+    },
+    {
+      "type": "entry",
+      "value": "Газелька 4Х4"
+    },
+    {
+      "type": "entry",
+      "value": "Лекс ЛФА"
+    },
+    {
+      "type": "entry",
+      "value": "Поршак 911 Дакар (Офф-роуд)"
+    },
+    {
+      "type": "entry",
+      "value": "Ламба Феномен"
+    },
+    {
+      "type": "entry",
+      "value": "МБ Г800 Брабос 4х4"
+    },
+    {
+      "type": "entry",
+      "value": "Шкова Супер Б 2025"
+    },
+    {
+      "type": "entry",
+      "value": "Шкова Октавия ВРС 2022"
+    },
+    {
+      "type": "entry",
+      "value": "РР Куллинан Блек Серия ll"
+    },
+    {
+      "type": "entry",
+      "value": "Аудитор РС5 Купе"
+    },
+    {
+      "type": "entry",
+      "value": "Субарь Импреза ВРХ СТИ"
+    },
+    {
+      "type": "entry",
+      "value": "Буггате Атлантик"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер М4 КСЛ 2024"
+    },
+    {
+      "type": "entry",
+      "value": "Инфиник КХ 80 Ларте"
+    },
+    {
+      "type": "entry",
+      "value": "Субарь Импреза ВРХ 2022"
+    },
+    {
+      "type": "entry",
+      "value": "Фолькс Туарег Р50"
+    },
+    {
+      "type": "entry",
+      "value": "Нивасик АМГ 2329 Пикап"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер М5 Г90 Туринг"
+    },
+    {
+      "type": "entry",
+      "value": "Нивасик 2329 Пикап"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер Х5М Ф85"
+    },
+    {
+      "type": "entry",
+      "value": "Поршак Брабос 900 Ракета"
+    },
+    {
+      "type": "entry",
+      "value": "Аудитор РС Ку 8 Офф-роуд"
+    },
+    {
+      "type": "entry",
+      "value": "Ровер Вог 2024"
+    },
+    {
+      "type": "entry",
+      "value": "МБ ГТ 63С Ракета"
+    },
+    {
+      "type": "entry",
+      "value": "Ксяоми СУ7"
+    },
+    {
+      "type": "line",
+      "text": "Куплю а/м \"МБ В124\". Бюджет: Свободный"
+    },
+    {
+      "type": "line",
+      "text": "Куплю а/м \"МБ В124\". Бюджет: 1.000.000 рублей."
+    },
+    {
+      "type": "line",
+      "text": ""
+    },
+    {
+      "type": "line",
+      "text": "Продам а/м \"МБ В124\". Цена: Договорная."
+    },
+    {
+      "type": "line",
+      "text": "Продам а/м \"МБ В124\". Цена: 1.000.000 рублей."
+    },
+    {
+      "type": "entry",
+      "value": "РР Райт"
+    },
+    {
+      "type": "entry",
+      "value": "Спортедж"
+    },
+    {
+      "type": "line",
+      "text": "Куплю а/м \"Мак Спидтейл\". Бюджет: Свободный"
+    },
+    {
+      "type": "line",
+      "text": "Куплю а/м \"Мак Спидтейл\". Бюджет: 1.000.000 рублей."
+    },
+    {
+      "type": "line",
+      "text": ""
+    },
+    {
+      "type": "line",
+      "text": "Продам а/м \"Мак Спидтейл\". Цена: Договорная."
+    },
+    {
+      "type": "line",
+      "text": "Продам а/м \"Мак Спидтейл\". Цена: 1.000.000 рублей."
+    },
+    {
+      "type": "entry",
+      "value": "МБ Майб Г900"
+    },
+    {
+      "type": "entry",
+      "value": "Тойода Тундра ПРО 23"
+    },
+    {
+      "type": "entry",
+      "value": "Ровер Защитник 1997"
+    },
+    {
+      "type": "entry",
+      "value": "Ламба Урус 6х6"
+    },
+    {
+      "type": "entry",
+      "value": "Хуньцэ ЕХС-9"
+    },
+    {
+      "type": "entry",
+      "value": "2203 РАФИК"
+    },
+    {
+      "type": "entry",
+      "value": "МБ 300-СЛ"
+    },
+    {
+      "type": "entry",
+      "value": "РР ЛонгТэйл"
+    },
+    {
+      "type": "entry",
+      "value": "РР Гост 2021"
+    },
+    {
+      "type": "entry",
+      "value": "МБ Стирлинг Мосс"
+    },
+    {
+      "type": "entry",
+      "value": "Мартин Бонда"
+    },
+    {
+      "type": "entry",
+      "value": "Мартин Валоур"
+    },
+    {
+      "type": "entry",
+      "value": "Мартин Ванквиш"
+    },
+    {
+      "type": "entry",
+      "value": "Ренджик 2022"
+    },
+    {
+      "type": "entry",
+      "value": "Хонд HC-ЭКС 1992"
+    },
+    {
+      "type": "entry",
+      "value": "Поршак 911-й Дрэг-Кинг"
+    },
+    {
+      "type": "entry",
+      "value": "Поршак 918 Спайдер"
+    },
+    {
+      "type": "entry",
+      "value": "Субарь ВРХ 2004"
+    },
+    {
+      "type": "entry",
+      "value": "МБ АМГ Уан"
+    },
+    {
+      "type": "entry",
+      "value": "Континенталь Кабрио 2022"
+    },
+    {
+      "type": "entry",
+      "value": "Ламба Ланцадор"
+    },
+    {
+      "type": "entry",
+      "value": "Ламба Диабло 1995"
+    },
+    {
+      "type": "entry",
+      "value": "Поршак Тарга 911"
+    },
+    {
+      "type": "entry",
+      "value": "Ниса 400z"
+    },
+    {
+      "type": "entry",
+      "value": "Ниса Скайлайнер Р32"
+    },
+    {
+      "type": "entry",
+      "value": "Ниса ГТР"
+    },
+    {
+      "type": "entry",
+      "value": "Шевик Импала 1967"
+    },
+    {
+      "type": "entry",
+      "value": "Купер Кабио 2020"
+    },
+    {
+      "type": "entry",
+      "value": "ХиПи 2024"
+    },
+    {
+      "type": "entry",
+      "value": "Киберладья 2111"
+    },
+    {
+      "type": "entry",
+      "value": "Парадный Кабриолет 4104"
+    },
+    {
+      "type": "entry",
+      "value": "Газик 21 Кабриолет"
+    },
+    {
+      "type": "entry",
+      "value": "МБ СЛ63 Родстер"
+    },
+    {
+      "type": "entry",
+      "value": "МБ С-В222"
+    },
+    {
+      "type": "entry",
+      "value": "МБ В223"
+    },
+    {
+      "type": "entry",
+      "value": "МБ ГЛЕ"
+    },
+    {
+      "type": "entry",
+      "value": "МБ ГЛС 63 АМГ 2016"
+    },
+    {
+      "type": "entry",
+      "value": "МБ С63 АМГ Купе"
+    },
+    {
+      "type": "entry",
+      "value": "Танк Пятисотый"
+    },
+    {
+      "type": "entry",
+      "value": "Жатва Урбан"
+    },
+    {
+      "type": "entry",
+      "value": "МБ 6x6 Mini"
+    },
+    {
+      "type": "entry",
+      "value": "Жига 2106"
+    },
+    {
+      "type": "entry",
+      "value": "Шнива Трэвэл"
+    },
+    {
+      "type": "entry",
+      "value": "Лекс LX-570"
+    },
+    {
+      "type": "entry",
+      "value": "МБ В-Класс"
+    },
+    {
+      "type": "entry",
+      "value": "Веста кросс"
+    },
+    {
+      "type": "entry",
+      "value": "Веста кросс 4x4"
+    },
+    {
+      "type": "entry",
+      "value": "Гранта Фейс Лифт 2018"
+    },
+    {
+      "type": "entry",
+      "value": "Ранглер-Каратель"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер Е60"
+    },
+    {
+      "type": "entry",
+      "value": "МБ 190-й"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер IX"
+    },
+    {
+      "type": "entry",
+      "value": "МБ GTBS"
+    },
+    {
+      "type": "entry",
+      "value": "Лис-9"
+    },
+    {
+      "type": "entry",
+      "value": "Доджер РЭМ Тирэкс"
+    },
+    {
+      "type": "entry",
+      "value": "Хонд S2000 Кабрио"
+    },
+    {
+      "type": "entry",
+      "value": "Ягуар Тайп 1971"
+    },
+    {
+      "type": "entry",
+      "value": "Хэндэ Вижн"
+    },
+    {
+      "type": "entry",
+      "value": "Бент Батур"
+    },
+    {
+      "type": "entry",
+      "value": "Мазер С20"
+    },
+    {
+      "type": "entry",
+      "value": "Мартин ДБХ707"
+    },
+    {
+      "type": "entry",
+      "value": "Бент ФлайСпур"
+    },
+    {
+      "type": "entry",
+      "value": "МБ W123"
+    },
+    {
+      "type": "entry",
+      "value": "Хамер EВ"
+    },
+    {
+      "type": "entry",
+      "value": "Буггате Вуйтюр"
+    },
+    {
+      "type": "entry",
+      "value": "Буггате Верон"
+    },
+    {
+      "type": "entry",
+      "value": "Ферра Ла-Ф"
+    },
+    {
+      "type": "entry",
+      "value": "Зик 009"
+    },
+    {
+      "type": "entry",
+      "value": "Москвович 3"
+    },
+    {
+      "type": "entry",
+      "value": "Москвович 423"
+    },
+    {
+      "type": "entry",
+      "value": "Поршак 911-й ГТР"
+    },
+    {
+      "type": "entry",
+      "value": "Лекс 500"
+    },
+    {
+      "type": "entry",
+      "value": "МБ Г900 6х6 Ракета"
+    },
+    {
+      "type": "entry",
+      "value": "Новогодняя Шестерка"
+    },
+    {
+      "type": "entry",
+      "value": "Ламба Хуракан-Стератто (Офф-роуд)"
+    },
+    {
+      "type": "entry",
+      "value": "Ферра Цилиндри"
+    },
+    {
+      "type": "entry",
+      "value": "Бронко"
+    },
+    {
+      "type": "entry",
+      "value": "Фордер Бронко"
+    },
+    {
+      "type": "entry",
+      "value": "Шкова Чех Эниак"
+    },
+    {
+      "type": "entry",
+      "value": "Итал ДаВинчи"
+    },
+    {
+      "type": "entry",
+      "value": "Аудитор РС Ку 8 Мансор 2019"
+    },
+    {
+      "type": "entry",
+      "value": "ЯнгВонг У8"
+    },
+    {
+      "type": "entry",
+      "value": "Аудитор РС3 Перфоманс"
+    },
+    {
+      "type": "entry",
+      "value": "Аудитор РС7-Р АБТ Спортлайн"
+    },
+    {
+      "type": "entry",
+      "value": "Хэндэ Цивик Тайп-Р"
+    },
+    {
+      "type": "entry",
+      "value": "Шкова Октавия ВРС 2018"
+    },
+    {
+      "type": "entry",
+      "value": "Ларгус 2024"
+    },
+    {
+      "type": "entry",
+      "value": "Поршак Кайен 2008"
+    },
+    {
+      "type": "entry",
+      "value": "Поршак Кайен Турбо ГТ 2022"
+    },
+    {
+      "type": "entry",
+      "value": "Поршак Кайман 718 ГТ 4 РС"
+    },
+    {
+      "type": "entry",
+      "value": "Аудитор СКУ 5 2023"
+    },
+    {
+      "type": "entry",
+      "value": "Буггате Диво"
+    },
+    {
+      "type": "entry",
+      "value": "Маздыч МХ-5 Миата"
+    },
+    {
+      "type": "entry",
+      "value": "Маздыч РКС-8 Спирит Р"
+    },
+    {
+      "type": "entry",
+      "value": "Волжанка 24"
+    },
+    {
+      "type": "entry",
+      "value": "Тойода Чайзер Джей Зет Икс 100"
+    },
+    {
+      "type": "entry",
+      "value": "Буггате Турбилон"
+    },
+    {
+      "type": "entry",
+      "value": "Кия К5"
+    },
+    {
+      "type": "entry",
+      "value": "Хавал Ф7"
+    },
+    {
+      "type": "entry",
+      "value": "Какдилак Эскалейд 2026"
+    },
+    {
+      "type": "entry",
+      "value": "Бент Континенталь ГТ 2016"
+    },
+    {
+      "type": "entry",
+      "value": "Ламба Ревуэльто"
+    },
+    {
+      "type": "entry",
+      "value": "Лекс ИС-Ф"
+    },
+    {
+      "type": "entry",
+      "value": "МБ Е63С АМГ 2021"
+    },
+    {
+      "type": "entry",
+      "value": "Фордер Раптор 150"
+    },
+    {
+      "type": "entry",
+      "value": "Инфиник Ку 60С"
+    },
+    {
+      "type": "entry",
+      "value": "Маздыч 3 Хэтч 2020"
+    },
+    {
+      "type": "entry",
+      "value": "Тойода Раф 4 2021"
+    },
+    {
+      "type": "entry",
+      "value": "Кёниг Жеско Абсолют 2021"
+    },
+    {
+      "type": "entry",
+      "value": "Ламба Урус СЕ 2024"
+    },
+    {
+      "type": "entry",
+      "value": "МБ П900 Ракета"
+    },
+    {
+      "type": "entry",
+      "value": "Мартин Винтаж Родстер"
+    },
+    {
+      "type": "entry",
+      "value": "Аудитор РС Е-трон ГТ"
+    },
+    {
+      "type": "entry",
+      "value": "МБ С65 АМГ В221"
+    },
+    {
+      "type": "entry",
+      "value": "Ферра ГТС4 Люсо 2017"
+    },
+    {
+      "type": "entry",
+      "value": "Аудитор С5 2025"
+    },
+    {
+      "type": "entry",
+      "value": "Фордер Мустанг Шелби ГТ 500"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер Х6М Комп Ф96"
+    },
+    {
+      "type": "entry",
+      "value": "Ровер Спорт СуперЧардж 2008"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер М5 Ф10"
+    },
+    {
+      "type": "entry",
+      "value": "МБ ЦЛА ЕВ 2025"
+    },
+    {
+      "type": "entry",
+      "value": "Шевик Лачети"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер 330i Г20 М Спорт"
+    },
+    {
+      "type": "entry",
+      "value": "Фолькс Тигуан 2021"
+    },
+    {
+      "type": "entry",
+      "value": "Субарь Импреза 22Б СТИ"
+    },
+    {
+      "type": "entry",
+      "value": "Хэндэ Елантра 2022"
+    },
+    {
+      "type": "entry",
+      "value": "Ниса ГТР  Нисмо Р35 2024"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер М3 КС Туринг 2025"
+    },
+    {
+      "type": "entry",
+      "value": "Ламба Венено 2013"
+    },
+    {
+      "type": "entry",
+      "value": "Кёниг Ц850"
+    },
+    {
+      "type": "entry",
+      "value": "Тойода Хайлюкс 2007"
+    },
+    {
+      "type": "entry",
+      "value": "Хэндэ Туксон 2025"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер i4 еДрайв40 2022"
+    },
+    {
+      "type": "entry",
+      "value": "Мартин Вальхалла 2025"
+    },
+    {
+      "type": "entry",
+      "value": "Мак В1 2025"
+    },
+    {
+      "type": "entry",
+      "value": "Ферра Ф90 ХХ Спайдер"
+    },
+    {
+      "type": "entry",
+      "value": "Буггате Верон Супер Спорт"
+    },
+    {
+      "type": "entry",
+      "value": "Веста НГ 2025"
+    },
+    {
+      "type": "entry",
+      "value": "Доджер Випер"
+    },
+    {
+      "type": "entry",
+      "value": "МБ Икс-Класс 2018"
+    },
+    {
+      "type": "entry",
+      "value": "Аура 2025"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер М3 Ф80 2016"
+    },
+    {
+      "type": "entry",
+      "value": "Тайода ГР86"
+    },
+    {
+      "type": "entry",
+      "value": "Аудитор Q7 С Лайн"
+    },
+    {
+      "type": "entry",
+      "value": "Поршак Макан ГТС"
+    },
+    {
+      "type": "entry",
+      "value": "МБ С580 АМГ 2027"
+    },
+    {
+      "type": "entry",
+      "value": "Маздыч RX-7 Вилсайд"
+    },
+    {
+      "type": "entry",
+      "value": "РР Куллинан"
+    },
+    {
+      "type": "entry",
+      "value": "Тайода Карола ГР 2024"
+    },
+    {
+      "type": "entry",
+      "value": "Буггате Болид 2025"
+    },
+    {
+      "type": "entry",
+      "value": "Кёниг Агера РС 17"
+    },
+    {
+      "type": "entry",
+      "value": "Ферра 812 2018"
+    },
+    {
+      "type": "entry",
+      "value": "Бумер Х5М 2026"
+    },
+    {
+      "type": "entry",
+      "value": "Аудитор Ку5 2026"
+    },
+    {
+      "type": "entry",
+      "value": "Тойода Труено 1985"
+    },
+    {
+      "type": "entry",
+      "value": "МБ Е50 АМГ В210"
+    },
+    {
+      "type": "entry",
+      "value": "МБ ГЛС 63 АМГ 2024"
+    },
+    {
+      "type": "entry",
+      "value": "Фордер Мустанг Кингпин 1969"
+    },
+    {
+      "type": "entry",
+      "value": "Ламба Темерарио 2024"
+    },
+    {
+      "type": "entry",
+      "value": "Нивасик Корч"
+    },
+    {
+      "type": "entry",
+      "value": "Мартин Вулкан 2015"
+    },
+    {
+      "type": "entry",
+      "value": "РР Куллинан 2025 Мансор"
+    },
+    {
+      "type": "entry",
+      "value": "Поршак Мансор Р900"
+    },
+    {
+      "type": "entry",
+      "value": "МБ Мансор Р850"
+    },
+    {
+      "type": "entry",
+      "value": "Бент Конт ГТ 2025"
+    },
+    {
+      "type": "entry",
+      "value": "Поршак 911 ГТ 3 РС Мантей"
+    },
+    {
+      "type": "entry",
+      "value": "Волжанка 2402 Универсал"
+    },
+    {
+      "type": "entry",
+      "value": "Аудитор РС Ку 8 2025"
+    },
+    {
+      "type": "entry",
+      "value": "2108 Кабрио"
+    },
+    {
+      "type": "entry",
+      "value": "Фордер Раптор"
+    }
+  ]
+}
