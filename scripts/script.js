@@ -6945,9 +6945,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const hasAM = originalText.toLowerCase().includes('а/м');
     const hasMOTO = originalText.toLowerCase().includes('мотоцикл');
     const hasBOAT = originalText.toLowerCase().includes('лодк');
+    const hasHELICOPTER = originalText.toLowerCase().includes('вертолет');
 
     // Добавляем боковые кнопки если есть а/м, мотоцикл или лодка
-    if (hasAM || hasMOTO || hasBOAT) {
+    if (hasAM || hasMOTO || hasBOAT || hasHELICOPTER) {
       const amButtonsContainer = document.createElement('div');
       amButtonsContainer.className = 'data__item-editor-am-buttons-side';
 
@@ -6999,8 +7000,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     } else {
       // Строки без названия в кавычках: "Куплю любой а/м. Бюджет: ..." —
-      // вставляем метку сразу после слова а/м / мотоцикл / лодка
-      const m = /(а\/м|мотоцикл[а-яё]*|лодк[а-яё]*)/i.exec(currentValue);
+      // вставляем метку сразу после слова а/м / мотоцикл / лодка / вертолет
+      const m = /(а\/м|мотоцикл[а-яё]*|лодк[а-яё]*|вертолет[а-яё]*)/i.exec(currentValue);
       if (m) {
         const end = m.index + m[0].length;
         const rest = currentValue.slice(end).replace(/^\s*(FT|DT|ET)(?![A-Za-z])/, '');
