@@ -1,5 +1,5 @@
 {
- "serial": 2,
+ "serial": 3,
  "users": [
   {
    "id": "6808-EEA5-48F7-ADEA",
@@ -8,6 +8,10 @@
   {
    "id": "FC0C-7E4F-9A61-F4B1",
    "name": "Lenchik"
+  },
+  {
+   "id": "BB39-9DBE-2E34-FED1",
+   "name": "Nika"
   }
  ],
  "issued": "2026-10-25"
