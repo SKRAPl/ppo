@@ -178,5 +178,12 @@
     "title": "Бизнесы",
     "parent": null,
     "color": null
+  },
+  {
+    "slug": "nomernye-ramki",
+    "title": "Номерные рамки",
+    "parent": null,
+    "color": null,
+    "hidden": false
   }
 ]
