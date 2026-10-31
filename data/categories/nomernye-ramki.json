@@ -21,5 +21,10 @@
       "suffix": ""
     }
   },
-  "blocks": []
+  "blocks": [
+    {
+      "type": "entry",
+      "value": "номерную рамку \"KING\""
+    }
+  ]
 }
