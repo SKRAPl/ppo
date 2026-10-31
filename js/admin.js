@@ -355,6 +355,11 @@
       </div>`;
     }
     return `<div class="card" style="margin-bottom:16px;">
+      <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:14px; padding-bottom:14px; border-bottom:1px solid var(--line);">
+        <div style="flex:1; min-width:240px; font-size:13px; color:var(--text-1);">В этой категории включён режим «как есть» — каждую строку нужно писать целиком.
+          Включите автосборку, и достаточно будет вводить только название.</div>
+        <button class="primary" id="enableTplBtn">Включить автосборку</button>
+      </div>
       <div class="add-row">
         <textarea id="newRawText" placeholder="Текст новой строки" rows="2"></textarea>
         <button class="primary" id="addRawBtn">Добавить</button>
@@ -368,6 +373,15 @@
       renderNav(u);
       renderCategoryView(u, slug, nextFocus);
     };
+
+    const enableTplBtn = document.getElementById("enableTplBtn");
+    if (enableTplBtn) {
+      enableTplBtn.addEventListener("click", () => {
+        PPOStore.stageEnableTemplate(slug);
+        toast("Автосборка включена — не забудьте «Сохранить изменения»", "success");
+        rerender("name");
+      });
+    }
 
     if (templated) {
       const nameInput = document.getElementById("newEntryName");
@@ -731,6 +745,10 @@
           </select>
           <button class="primary" id="addCatBtn">Добавить</button>
         </div>
+        <label style="display:flex; gap:8px; align-items:center; margin-top:12px; font-size:13px; color:var(--text-1); cursor:pointer;">
+          <input type="checkbox" id="newCatTemplated" checked style="width:auto;">
+          Автосборка: достаточно написать название — строки «Куплю / Продам» соберутся сами
+        </label>
       </div>
       <table class="users-table">
         <thead><tr><th>Название</th><th>Тип</th><th></th></tr></thead>
@@ -816,7 +834,8 @@
       const title = document.getElementById("newCatTitle").value;
       const parent = document.getElementById("newCatParent").value || null;
       await withBusyButton(e.target, async () => {
-        const res = await PPOStore.addCategory(title, parent, null);
+        const templated = document.getElementById("newCatTemplated").checked;
+        const res = await PPOStore.addCategory(title, parent, null, templated);
         if (!res.ok) return toast(res.error, "error");
         toast("Категория добавлена", "success");
         renderCategoriesManageView(u);

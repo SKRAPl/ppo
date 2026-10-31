@@ -25,6 +25,16 @@
 (function (global) {
   "use strict";
 
+  // Шаблон по умолчанию: одно название → 4 строки купить/продать (+ пустая прокладка)
+  const DEFAULT_TEMPLATE = {
+    0: { prefix: "Куплю ", suffix: ". Бюджет: Свободный." },
+    1: { prefix: "Куплю ", suffix: ". Бюджет: 1.000.000 рублей." },
+    2: { prefix: "Продам ", suffix: ". Цена: Договорная." },
+    3: { prefix: "Продам ", suffix: ". Цена: 1.000.000 рублей." },
+    nameWrapper: { prefix: "", suffix: "" },
+  };
+  function defaultTemplate() { return JSON.parse(JSON.stringify(DEFAULT_TEMPLATE)); }
+
   let categories = [];
   let categoryDataCache = {}; // slug -> {template, blocks} — последнее закоммиченное состояние
   let draftCache = {}; // slug -> {template, blocks} — несохранённый черновик (если есть)
@@ -191,7 +201,7 @@
     return out.replace(/-+/g, "-").replace(/^-|-$/g, "") || "category";
   }
 
-  async function addCategory(title, parentSlug, color) {
+  async function addCategory(title, parentSlug, color, templated) {
     title = String(title || "").trim();
     if (!title) return { ok: false, error: "Введите название категории." };
     let newSlug;
@@ -204,7 +214,7 @@
       return list.concat([{ slug, title, parent: parentSlug || null, color: color || null, hidden: false }]);
     }, `Админка: добавлена категория «${title}»`);
     if (!res.ok) return res;
-    const emptyPayload = { template: null, blocks: [] };
+    const emptyPayload = { template: templated === false ? null : defaultTemplate(), blocks: [] };
     const putRes = await global.PPOGithub.putFile(categoryPath(newSlug), JSON.stringify(emptyPayload, null, 1), `Админка: создан файл категории «${title}»`);
     if (!putRes.ok) return putRes;
     categoryDataCache[newSlug] = emptyPayload;
@@ -248,6 +258,15 @@
     if (!blocks[idx] || blocks[idx].type !== "entry") return { ok: false, error: "Запись не найдена." };
     blocks[idx] = { type: "entry", value: newName };
     draft.blocks = blocks;
+    persistDraft(slug);
+    return { ok: true };
+  }
+
+  // Включить автосборку для категории, которая работала «как есть» (строки остаются как были)
+  function stageEnableTemplate(slug) {
+    if (hasTemplate(slug)) return { ok: true };
+    const draft = ensureDraft(slug);
+    draft.template = defaultTemplate();
     persistDraft(slug);
     return { ok: true };
   }
@@ -353,6 +372,7 @@
     stageAddEntry,
     stageEditEntry,
     stageAddRawLine,
+    stageEnableTemplate,
     stageEditRawLine,
     stageAddBlank,
     stageAddPair,
