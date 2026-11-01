@@ -1,5 +1,5 @@
 {
- "serial": 4,
+ "serial": 6,
  "users": [
   {
    "id": "6808-EEA5-48F7-ADEA",
@@ -16,8 +16,8 @@
   {
    "id": "1E04-7EB9-0CF9-E7E5",
    "name": "Ilya",
-   "expires": "2026-10-29"
+   "expires": "2026-12-01"
   }
  ],
- "issued": "2026-10-28"
+ "issued": "2026-11-01"
 }
